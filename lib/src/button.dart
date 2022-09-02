@@ -191,6 +191,7 @@ class _ButtonState extends State<Button> with TickerProviderStateMixin {
                     return Column(
                       children: [
                         icon,
+
                         Container(
                           decoration: BoxDecoration(
                               shape: BoxShape.rectangle,

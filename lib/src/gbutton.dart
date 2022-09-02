@@ -33,6 +33,7 @@ class GButton extends StatefulWidget {
   final String? semanticLabel;
   final GnavStyle? style;
   final double? textSize;
+  final Color? circleColor;
 
   const GButton({
     Key? key,
@@ -64,6 +65,7 @@ class GButton extends StatefulWidget {
     this.semanticLabel,
     this.style = GnavStyle.google,
     this.textSize,
+    this.circleColor,
   }) : super(key: key);
 
   @override
@@ -76,6 +78,7 @@ class _GButtonState extends State<GButton> {
     return Semantics(
       label: widget.semanticLabel ?? widget.text,
       child: Button(
+        circleColor: widget.circleColor,
         textSize: widget.textSize,
         style: widget.style,
         borderRadius: widget.borderRadius,
