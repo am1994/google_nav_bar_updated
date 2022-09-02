@@ -203,7 +203,7 @@ class _ButtonState extends State<Button> with TickerProviderStateMixin {
 
                           padding: EdgeInsets.only(top: widget.gap!),
                           child: Text(
-                            widget.text!.data!,
+                            "fffffff",
                             style: TextStyle(
                               color: _colorTweenAnimation.value,
                               fontSize: widget.textSize ?? 16,
