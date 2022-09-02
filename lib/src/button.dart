@@ -29,7 +29,7 @@ class Button extends StatefulWidget {
     this.activeBorder,
     this.shadow,
     this.style = GnavStyle.google,
-    this.textSize,
+    this.textSize, this.circleColor,
   }) : super(key: key);
 
   final IconData? icon;
@@ -56,6 +56,7 @@ class Button extends StatefulWidget {
   final List<BoxShadow>? shadow;
   final GnavStyle? style;
   final double? textSize;
+  final Color? circleColor;
 
   @override
   _ButtonState createState() => _ButtonState();
@@ -191,6 +192,14 @@ class _ButtonState extends State<Button> with TickerProviderStateMixin {
                       children: [
                         icon,
                         Container(
+                          decoration: BoxDecoration(
+                              shape: BoxShape.rectangle,
+                              borderRadius:
+                              BorderRadius.circular(25),
+                              color: widget.circleColor
+                          ),
+
+
                           padding: EdgeInsets.only(top: widget.gap!),
                           child: Text(
                             widget.text!.data!,
