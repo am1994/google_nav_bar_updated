@@ -106,7 +106,7 @@ class _GButtonState extends State<GButton> {
         iconColor: widget.iconColor,
         icon: widget.icon,
         text: Text(
-          widget.text,
+          'ddddd',
           style: widget.textStyle ??
               TextStyle(
                 fontWeight: FontWeight.w600,
