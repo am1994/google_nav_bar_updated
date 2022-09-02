@@ -35,7 +35,7 @@ class GNav extends StatefulWidget {
     this.tabBackgroundGradient,
     this.mainAxisAlignment = MainAxisAlignment.spaceBetween,
     this.style = GnavStyle.google,
-    this.textSize,
+    this.textSize, this.circleColor,
   }) : super(key: key);
 
   final List<GButton> tabs;
@@ -64,6 +64,7 @@ class GNav extends StatefulWidget {
   final MainAxisAlignment mainAxisAlignment;
   final GnavStyle? style;
   final double? textSize;
+  final Color? circleColor;
 
   @override
   _GNavState createState() => _GNavState();
@@ -95,6 +96,7 @@ class _GNavState extends State<GNav> {
             mainAxisAlignment: widget.mainAxisAlignment,
             children: widget.tabs
                 .map((t) => GButton(
+              circleColor: widget.circleColor,
                       textSize: widget.textSize,
                       style: widget.style,
                       key: t.key,
