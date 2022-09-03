@@ -135,13 +135,17 @@ class _ButtonState extends State<Button> with TickerProviderStateMixin {
                   ? (widget.activeBorder ?? widget.border)
                   : widget.border,
               gradient: widget.gradient,
-              color: _expanded
-                  ? widget.color!
+              color:
+
+              _expanded
+                  ? widget.circleColor
                   : widget.debug!
                       ? Colors.red
                       : widget.gradient != null
                           ? Colors.white
                           : widget.color,
+
+
               borderRadius: widget.borderRadius,
             ),
 
@@ -151,6 +155,7 @@ class _ButtonState extends State<Button> with TickerProviderStateMixin {
               child: Builder(
                 builder: (_) {
                   if (widget.style == GnavStyle.google) {
+
                     return Stack(
                       children: [
                         if (widget.text!.data != '')
@@ -161,6 +166,9 @@ class _ButtonState extends State<Button> with TickerProviderStateMixin {
                                   opacity: 0,
                                   child: icon,
                                 ),
+
+
+
                                 Container(
                                   child: Container(
                                     child: Align(

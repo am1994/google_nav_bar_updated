@@ -96,7 +96,7 @@ class _GNavState extends State<GNav> {
             mainAxisAlignment: widget.mainAxisAlignment,
             children: widget.tabs
                 .map((t) => GButton(
-              circleColor: widget.circleColor,
+                        circleColor: widget.circleColor,
                       textSize: widget.textSize,
                       style: widget.style,
                       key: t.key,

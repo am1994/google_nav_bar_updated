@@ -65,14 +65,13 @@ class _ExampleState extends State<Example> {
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 8),
             child: GNav(
-              rippleColor: Colors.grey[300]!,
-              hoverColor: Colors.grey[100]!,
+              circleColor: Colors.green,
               gap: 8,
               activeColor: Colors.black,
               iconSize: 24,
               padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
               duration: Duration(milliseconds: 400),
-              tabBackgroundColor: Colors.grey[100]!,
+             // tabBackgroundColor: Colors.grey[100]!,
 
               color: Colors.black,
               tabs: [
@@ -85,17 +84,16 @@ class _ExampleState extends State<Example> {
                   text: 'Likes',
                 ),
                 GButton(
-                  debug: true,
 
                   borderRadius: BorderRadius.circular(45),
                   icon: LineIcons.search,
                   text: 'Search',
                 ),
                 GButton(
+                 circleColor: Colors.green,
                   icon: LineIcons.user,
                   text: 'Profile',
                   leading:  CircleAvatar(
-                    backgroundColor: Colors.red,
                     radius: 12,
                     backgroundImage: NetworkImage(
                       'https://sooxt98.space/content/images/size/w100/2019/01/profile.png',
