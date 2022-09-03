@@ -29,7 +29,8 @@ class Button extends StatefulWidget {
     this.activeBorder,
     this.shadow,
     this.style = GnavStyle.google,
-    this.textSize, this.circleColor,
+    this.textSize,
+    this.circleColor,
   }) : super(key: key);
 
   final IconData? icon;
@@ -114,99 +115,86 @@ class _ButtonState extends State<Button> with TickerProviderStateMixin {
         onTap: widget.onPressed,
         child: Container(
           padding: widget.margin,
-
           child: AnimatedContainer(
             curve: Curves.easeOut,
             padding: widget.padding,
             duration: widget.duration!,
-
-
             decoration: BoxDecoration(
               boxShadow: widget.shadow,
               border: widget.active!
                   ? (widget.activeBorder ?? widget.border)
                   : widget.border,
               gradient: widget.gradient,
-              color:
-
-              _expanded
+              color: _expanded
                   ? widget.circleColor
                   : widget.debug!
                       ? Colors.red
                       : widget.gradient != null
                           ? Colors.white
                           : widget.color,
-
-
               borderRadius: widget.borderRadius,
             ),
-
-
             child: FittedBox(
               fit: BoxFit.fitHeight,
               child: Builder(
                 builder: (_) {
                   if (widget.style == GnavStyle.google) {
-
                     return Stack(
                       children: [
                         if (widget.text!.data != '')
-
                           Row(
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
-
                                 Opacity(
                                   opacity: 0,
                                   child: icon,
                                 ),
-
                                 Container(
-                                  child:
-                                  Align(
-
+                                  child: Align(
                                       alignment: Alignment.centerLeft,
                                       widthFactor: curveValue,
-
                                       child: Opacity(
                                           opacity: _expanded
-                                              ? pow(expandController.value,
-                                                  13) as double
+                                              ? pow(expandController.value, 13)
+                                                  as double
                                               : expandController
                                                   .drive(CurveTween(
                                                       curve: Curves.easeIn))
                                                   .value,
                                           child: Padding(
                                             padding: EdgeInsets.only(
-                                                // left: widget.gap! +
-                                                //     8 -
-                                                //     (8 *
-                                                //         expandController
-                                                //             .drive(CurveTween(
-                                                //                 curve: Curves
-                                                //                     .easeOutSine
-                                                //
-                                                //         )
-                                                //         )
-                                                //             .value),
+                                              // left: widget.gap! +
+                                              //     8 -
+                                              //     (8 *
+                                              //         expandController
+                                              //             .drive(CurveTween(
+                                              //                 curve: Curves
+                                              //                     .easeOutSine
+                                              //
+                                              //         )
+                                              //         )
+                                              //             .value),
                                               left: 4,
-                                                right: 8 *
-                                                    expandController
-                                                        .drive(CurveTween(
-                                                            curve: Curves
-                                                                .easeOutSine
-
-                                                    ))
-                                                        .value),
+                                              right: widget.gap! +
+                                                  8 -
+                                                  (8 *
+                                                      expandController
+                                                          .drive(CurveTween(
+                                                              curve: Curves
+                                                                  .easeOutSine))
+                                                          .value),
+                                              // right: 8 *
+                                              //     expandController
+                                              //         .drive(CurveTween(
+                                              //             curve: Curves
+                                              //                 .easeOutSine
+                                              //
+                                              //     )).value
+                                            ),
                                             child: widget.text,
                                           ))),
                                 ),
-
-
                               ]),
-
-
-
                         Align(alignment: Alignment.centerLeft, child: icon),
                       ],
                     );
@@ -214,7 +202,6 @@ class _ButtonState extends State<Button> with TickerProviderStateMixin {
                     return Column(
                       children: [
                         icon,
-
                         Container(
                           padding: EdgeInsets.only(top: widget.gap!),
                           child: Text(
