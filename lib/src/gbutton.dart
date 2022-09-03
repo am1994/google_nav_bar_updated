@@ -107,6 +107,7 @@ class _GButtonState extends State<GButton> {
         icon: widget.icon,
         text: Text(
           widget.text,
+          textAlign: TextAlign.center,
           style: widget.textStyle ??
               TextStyle(
                 fontWeight: FontWeight.w600,

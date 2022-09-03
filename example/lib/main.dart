@@ -66,7 +66,7 @@ class _ExampleState extends State<Example> {
             padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 8),
             child: GNav(
               circleColor: Colors.green,
-              gap: 8,
+              gap: 20,
               activeColor: Colors.black,
               iconSize: 24,
               padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
@@ -78,6 +78,9 @@ class _ExampleState extends State<Example> {
                 GButton(
                   icon: LineIcons.home,
                   text: 'Home',
+                  textStyle: TextStyle(
+                    textBaseline: TextBaseline.ideographic
+                  ),
                 ),
                 GButton(
                   icon: LineIcons.heart,
