@@ -143,7 +143,7 @@ class _ButtonState extends State<Button> with TickerProviderStateMixin {
                       children: [
                         if (widget.text!.data != '')
                           Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Opacity(
                                   opacity: 0,
@@ -151,7 +151,7 @@ class _ButtonState extends State<Button> with TickerProviderStateMixin {
                                 ),
                                 Container(
                                   child: Align(
-                                      alignment: Alignment.centerLeft,
+                                      alignment: Alignment.center,
                                       widthFactor: curveValue,
                                       child: Opacity(
                                           opacity: _expanded
@@ -195,7 +195,7 @@ class _ButtonState extends State<Button> with TickerProviderStateMixin {
                                           ))),
                                 ),
                               ]),
-                        Align(alignment: Alignment.centerLeft, child: icon),
+                        Align(alignment: Alignment.center, child: icon),
                       ],
                     );
                   } else if (widget.style == GnavStyle.oldSchool) {
