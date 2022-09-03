@@ -90,6 +90,7 @@ class _GButtonState extends State<GButton> {
         iconSize: widget.iconSize,
         active: widget.active,
         onPressed: () {
+          print('cliiiiiiicked');
           if (widget.haptic!) HapticFeedback.selectionClick();
           widget.onPressed?.call();
         },
@@ -106,7 +107,7 @@ class _GButtonState extends State<GButton> {
         iconColor: widget.iconColor,
         icon: widget.icon,
         text: Text(
-          'ddddd',
+          widget.text,
           style: widget.textStyle ??
               TextStyle(
                 fontWeight: FontWeight.w600,
