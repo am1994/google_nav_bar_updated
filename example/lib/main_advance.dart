@@ -78,6 +78,7 @@ class _TabPageState extends State<TabPage> {
               child: GNav(
                 tabs: [
                   GButton(
+                    circleColor: Colors.red,
                     gap: gap,
                     iconActiveColor: Colors.purple,
                     iconColor: Colors.black,
@@ -115,6 +116,8 @@ class _TabPageState extends State<TabPage> {
                             ),
                           ),
                   ),
+
+
                   GButton(
                     gap: gap,
                     iconActiveColor: Colors.amber[600],
@@ -126,6 +129,8 @@ class _TabPageState extends State<TabPage> {
                     icon: LineIcons.search,
                     text: 'Search',
                   ),
+
+
                   GButton(
                     gap: gap,
                     iconActiveColor: Colors.teal,
@@ -136,6 +141,7 @@ class _TabPageState extends State<TabPage> {
                     padding: padding,
                     icon: LineIcons.user,
                     leading: CircleAvatar(
+                      backgroundColor: Colors.red,
                       radius: 12,
                       backgroundImage: NetworkImage(
                         'https://sooxt98.space/content/images/size/w100/2019/01/profile.png',
@@ -143,6 +149,8 @@ class _TabPageState extends State<TabPage> {
                     ),
                     text: 'Sheldon',
                   )
+
+
                 ],
                 selectedIndex: selectedIndex,
                 onTabChange: (index) {

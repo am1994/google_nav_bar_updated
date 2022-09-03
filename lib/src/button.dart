@@ -114,6 +114,15 @@ class _ButtonState extends State<Button> with TickerProviderStateMixin {
         onTap: widget.onPressed,
         child: Container(
           padding: widget.margin,
+          //
+          // decoration: BoxDecoration(
+          //     shape: BoxShape.rectangle,
+          //     borderRadius:
+          //     BorderRadius.circular(25),
+          //     color: widget.circleColor
+          // ),
+
+
           child: AnimatedContainer(
             curve: Curves.easeOut,
             padding: widget.padding,
@@ -125,7 +134,7 @@ class _ButtonState extends State<Button> with TickerProviderStateMixin {
                   : widget.border,
               gradient: widget.gradient,
               color: _expanded
-                  ? widget.color!.withOpacity(0)
+                  ? widget.color!
                   : widget.debug!
                       ? Colors.red
                       : widget.gradient != null
@@ -133,6 +142,8 @@ class _ButtonState extends State<Button> with TickerProviderStateMixin {
                           : widget.color,
               borderRadius: widget.borderRadius,
             ),
+
+
             child: FittedBox(
               fit: BoxFit.fitHeight,
               child: Builder(
@@ -193,19 +204,9 @@ class _ButtonState extends State<Button> with TickerProviderStateMixin {
                         icon,
 
                         Container(
-                          height: 30,
-                          width: 30,
-                          decoration: BoxDecoration(
-                              shape: BoxShape.rectangle,
-                              borderRadius:
-                              BorderRadius.circular(25),
-                              color: widget.circleColor
-                          ),
-
-
                           padding: EdgeInsets.only(top: widget.gap!),
                           child: Text(
-                            "fffffff",
+                            widget.text!.data!,
                             style: TextStyle(
                               color: _colorTweenAnimation.value,
                               fontSize: widget.textSize ?? 16,

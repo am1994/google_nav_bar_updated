@@ -73,6 +73,8 @@ class _ExampleState extends State<Example> {
               padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
               duration: Duration(milliseconds: 400),
               tabBackgroundColor: Colors.grey[100]!,
+              tabBorder: Border.all(color: Colors.red),
+              tabActiveBorder: Border.all(color: Colors.green),
               color: Colors.black,
               tabs: [
                 GButton(
@@ -84,12 +86,22 @@ class _ExampleState extends State<Example> {
                   text: 'Likes',
                 ),
                 GButton(
+                  debug: true,
+
+                  borderRadius: BorderRadius.circular(45),
                   icon: LineIcons.search,
                   text: 'Search',
                 ),
                 GButton(
                   icon: LineIcons.user,
                   text: 'Profile',
+                  leading:  CircleAvatar(
+                    backgroundColor: Colors.red,
+                    radius: 12,
+                    backgroundImage: NetworkImage(
+                      'https://sooxt98.space/content/images/size/w100/2019/01/profile.png',
+                    ),
+                  ),
                 ),
               ],
               selectedIndex: _selectedIndex,
