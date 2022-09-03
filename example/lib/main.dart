@@ -73,8 +73,7 @@ class _ExampleState extends State<Example> {
               padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
               duration: Duration(milliseconds: 400),
               tabBackgroundColor: Colors.grey[100]!,
-              tabBorder: Border.all(color: Colors.red),
-              tabActiveBorder: Border.all(color: Colors.green),
+
               color: Colors.black,
               tabs: [
                 GButton(

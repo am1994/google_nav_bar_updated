@@ -127,6 +127,8 @@ class _ButtonState extends State<Button> with TickerProviderStateMixin {
             curve: Curves.easeOut,
             padding: widget.padding,
             duration: widget.duration!,
+
+
             decoration: BoxDecoration(
               boxShadow: widget.shadow,
               border: widget.active!
