@@ -90,7 +90,6 @@ class _GButtonState extends State<GButton> {
         iconSize: widget.iconSize,
         active: widget.active,
         onPressed: () {
-          print('cliiiiiiicked');
           if (widget.haptic!) HapticFeedback.selectionClick();
           widget.onPressed?.call();
         },
