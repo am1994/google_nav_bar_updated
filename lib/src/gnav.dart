@@ -14,7 +14,7 @@ class GNav extends StatefulWidget {
     this.selectedIndex = 0,
     this.onTabChange,
     this.gap = 0,
-    this.padding = const EdgeInsets.all(25),
+    this.padding = const EdgeInsets.all(0),
     this.activeColor,
     this.color,
     this.rippleColor = Colors.transparent,
@@ -96,7 +96,7 @@ class _GNavState extends State<GNav> {
             mainAxisAlignment: widget.mainAxisAlignment,
             children: widget.tabs
                 .map((t) => GButton(
-                        circleColor: widget.circleColor,
+              circleColor: widget.circleColor,
                       textSize: widget.textSize,
                       style: widget.style,
                       key: t.key,

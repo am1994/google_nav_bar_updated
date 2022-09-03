@@ -90,14 +90,12 @@ class _ExampleState extends State<Example> {
                   text: 'Search',
                 ),
                 GButton(
+                  padding: EdgeInsets.all(8),
                  circleColor: Colors.green,
                   icon: LineIcons.user,
                   text: 'Profile',
                   leading:  CircleAvatar(
                     radius: 12,
-                    backgroundImage: NetworkImage(
-                      'https://sooxt98.space/content/images/size/w100/2019/01/profile.png',
-                    ),
                   ),
                 ),
               ],

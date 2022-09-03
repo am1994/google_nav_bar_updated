@@ -114,14 +114,6 @@ class _ButtonState extends State<Button> with TickerProviderStateMixin {
         onTap: widget.onPressed,
         child: Container(
           padding: widget.margin,
-          //
-          // decoration: BoxDecoration(
-          //     shape: BoxShape.rectangle,
-          //     borderRadius:
-          //     BorderRadius.circular(25),
-          //     color: widget.circleColor
-          // ),
-
 
           child: AnimatedContainer(
             curve: Curves.easeOut,
@@ -160,19 +152,18 @@ class _ButtonState extends State<Button> with TickerProviderStateMixin {
                       children: [
                         if (widget.text!.data != '')
                           Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
+                              mainAxisAlignment: MainAxisAlignment.center,
                               children: [
+
                                 Opacity(
                                   opacity: 0,
                                   child: icon,
                                 ),
 
-
-
                                 Container(
                                   child: Container(
                                     child: Align(
-                                        alignment: Alignment.centerRight,
+                                        alignment: Alignment.center,
                                         widthFactor: curveValue,
                                         child: Container(
                                           child: Opacity(
@@ -205,7 +196,7 @@ class _ButtonState extends State<Button> with TickerProviderStateMixin {
                                   ),
                                 ),
                               ]),
-                        Align(alignment: Alignment.centerLeft, child: icon),
+                        Align(alignment: Alignment.center, child: icon),
                       ],
                     );
                   } else if (widget.style == GnavStyle.oldSchool) {
