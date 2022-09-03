@@ -91,7 +91,7 @@ class _GNavState extends State<GNav> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        color: widget.backgroundColor,
+        color: Colors.green,
         child: Row(
             mainAxisAlignment: widget.mainAxisAlignment,
             children: widget.tabs
